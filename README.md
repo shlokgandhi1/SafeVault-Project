@@ -12,6 +12,6 @@ http://localhost:5007
 
 
 Requirements
-- .NET 8+
-- SQLite (no installation required)
+- .NET 10+
+- SQLite
 - REST Client extension (optional)
