@@ -3,12 +3,12 @@
 
 ## How to Run
 - Install dependencies:
-dotnet restore
+```dotnet restore```
 - Run the API:
-dotnet run
+```dotnet run```
 - The server will start at:
-http://localhost:5007
-- Use the Requests.http file to send requests
+```http://localhost:5007```
+- Use the ```Requests.http``` file to send requests
 
 
 ## Requirements
