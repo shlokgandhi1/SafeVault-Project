@@ -8,6 +8,7 @@ dotnet restore
 dotnet run
 - The server will start at:
 http://localhost:5007
+- Use the Requests.http file to send requests
 
 
 ## Requirements
