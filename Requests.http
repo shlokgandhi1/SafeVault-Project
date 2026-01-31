@@ -1,0 +1,68 @@
+### Register an Admin User
+POST http://localhost:5007/register
+Content-Type: application/json
+
+{
+  "username": "adminUser",
+  "password": "THISisAPassword123!",
+  "role": "admin"
+}
+
+
+
+### Register a Normal User
+POST http://localhost:5007/register
+Content-Type: application/json
+
+{
+  "username": "normalUser",
+  "password": "THISisAPassword1234!",
+  "role": "user"
+}
+
+
+
+### Login as Admin
+POST http://localhost:5007/login
+Content-Type: application/json
+
+{
+  "username": "adminUser",
+  "password": "THISisAPassword123!"
+}
+
+
+
+### Login as Normal User
+POST http://localhost:5007/login
+Content-Type: application/json
+
+{
+  "username": "normalUser",
+  "password": "THISisAPassword1234!"
+}
+
+
+
+### Access Admin Route as Admin (should pass)
+GET http://localhost:5007/admin?username=adminUser
+
+
+
+### Access Admin Route as Normal User (should fail)
+GET http://localhost:5007/admin?username=normalUser
+
+
+
+### Access User Route as Normal User (should pass)
+GET http://localhost:5007/user?username=normalUser
+
+
+
+### Access User Route as Admin (should pass)
+GET http://localhost:5007/user?username=adminUser
+
+
+
+### Access User Route Without Login (should fail, does nothing)
+GET http://localhost:5007/user?username=unknownUser
